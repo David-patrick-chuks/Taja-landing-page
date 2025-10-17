@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import { easeOut, motion } from "framer-motion"
 import { Activity, ChartNoAxesColumn, TrendingDown, TrendingUp } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
-import { Target, ProductCategories } from "../icons/icons"
+import { ProductCategories, Target } from "../icons/icons"
 
 type Card = {
     id: number

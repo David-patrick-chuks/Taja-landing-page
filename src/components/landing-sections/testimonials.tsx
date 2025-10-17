@@ -4,14 +4,6 @@ import { MockTestimonialsGrid, type TestimonialData } from '../ui/mock-testimoni
 
 const mockTestimonials: TestimonialData[] = [
     {
-        id: "1",
-        name: "Sarah Chen",
-        handle: "seller_fashion",
-        avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-        verified: true,
-        text: "taja made selling online so simple. I just send product photos to the bot and customers can find them by uploading similar images. No website needed!"
-    },
-    {
         id: "2", 
         name: "David Kim",
         handle: "shopper_dk",
