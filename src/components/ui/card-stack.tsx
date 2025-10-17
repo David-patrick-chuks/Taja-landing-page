@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import { easeOut, motion } from "framer-motion"
 import { Activity, ChartNoAxesColumn, TrendingDown, TrendingUp } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
-import { Target, TechTags } from "../icons/icons"
+import { Target, ProductCategories } from "../icons/icons"
 
 type Card = {
     id: number
@@ -27,7 +27,7 @@ const SIMPLE_CARDS = [
                     <p className='text-transparent font-semibold text-sm '>Filter By: PRODUCT CATEGORY</p>
                 </div>
             </div>
-            <TechTags />
+            <ProductCategories />
         </div>
     },
     {
