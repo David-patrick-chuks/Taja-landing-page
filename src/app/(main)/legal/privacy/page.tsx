@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -16,15 +15,10 @@ export default function PrivacyPolicyPage() {
           {/* Introduction */}
           <section>
             <p className="text-lg">
-              At BlockRoll, we take your privacy seriously. Please read this
-              Privacy Policy to learn how we treat your personal data. By using
-              or accessing our Services in any manner, you acknowledge that you
-              accept the practices and policies outlined below, and you hereby
-              consent that we will collect, use and share your information as
-              described in this Privacy Policy.
+              At Taja, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your information when you use our WhatsApp commerce platform.
             </p>
             <p className="text-lg mt-4">
-              Remember that your use of BlockRoll's Services is at all times
+              Remember that your use of Taja's Services is at all times
               subject to our{" "}
               <a
                 href="/legal/terms"
@@ -345,7 +339,7 @@ export default function PrivacyPolicyPage() {
                   <li>
                     Responding to correspondence that we receive from you,
                     contacting you when necessary or requested, and sending you
-                    information about BlockRoll or the Services.
+                    information about Taja or the Services.
                   </li>
                   <li>
                     Sending emails and other communications according to your
@@ -369,7 +363,7 @@ export default function PrivacyPolicyPage() {
                     and potentially illegal or prohibited activities.
                   </li>
                   <li>
-                    Protecting the rights, property or safety of you, BlockRoll
+                    Protecting the rights, property or safety of you, Taja
                     or another party.
                   </li>
                   <li>Enforcing any agreements with you.</li>
@@ -694,10 +688,10 @@ export default function PrivacyPolicyPage() {
               possible. If you believe that a child under 13 years of age may
               have provided Personal Data to us, please contact us at{" "}
               <a
-                href="mailto:hi@blockroll.com"
+                href="mailto:hi@taja.com"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
-                hi@blockroll.com
+                hi@taja.com
               </a>
               .
             </p>
@@ -719,10 +713,10 @@ export default function PrivacyPolicyPage() {
               marketing purposes; in order to submit such a request, please
               contact us at{" "}
               <a
-                href="mailto:hi@blockroll.com"
+                href="mailto:hi@taja.com"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
-                hi@blockroll.com
+                hi@taja.com
               </a>
               .
             </p>
@@ -736,10 +730,10 @@ export default function PrivacyPolicyPage() {
               license or sell that Personal Data. You can exercise this right by
               contacting us at{" "}
               <a
-                href="mailto:hi@blockroll.com"
+                href="mailto:hi@taja.com"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
-                hi@blockroll.com
+                hi@taja.com
               </a>{" "}
               with the subject line "Nevada Do Not Sell Request" and providing
               us with your name and the email address associated with your
@@ -766,7 +760,7 @@ export default function PrivacyPolicyPage() {
               generally means information that can be used to individually
               identify a person, and "processing" generally covers actions that
               can be performed in connection with data such as collection, use,
-              storage and disclosure. BlockRoll will be the controller of your
+              storage and disclosure. Taja will be the controller of your
               Personal Data processed in connection with the Services.
             </p>
 
@@ -843,10 +837,10 @@ export default function PrivacyPolicyPage() {
               including those set forth below. For more information about these
               rights, or to submit a request, please email us at{" "}
               <a
-                href="mailto:hi@blockroll.com"
+                href="mailto:hi@taja.com"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
-                hi@blockroll.com
+                hi@taja.com
               </a>
               . Please note that in some circumstances, we may not be able to
               fully comply with your request, such as if it is frivolous or
@@ -904,7 +898,7 @@ export default function PrivacyPolicyPage() {
               </li>
               <li>
                 <strong>Right to File Complaint:</strong> You have the right to
-                lodge a complaint about BlockRoll's practices with respect to
+                lodge a complaint about Taja's practices with respect to
                 your Personal Data with the supervisory authority of your
                 country or EU Member State. A list of Supervisory Authorities is
                 available here:{" "}
@@ -929,7 +923,7 @@ export default function PrivacyPolicyPage() {
             <p>
               We're constantly trying to improve our Services, so we may need to
               change this Privacy Policy from time to time, but we will alert
-              you to any such changes by placing a notice on the BlockRoll
+              you to any such changes by placing a notice on the Taja
               website, by sending you an email and/or by some other means.
               Please note that if you've opted not to receive legal notice
               emails from us (or you haven't provided us with your email
@@ -958,21 +952,21 @@ export default function PrivacyPolicyPage() {
               <p>
                 <strong>Email:</strong>{" "}
                 <a
-                  href="mailto:hi@blockroll.com"
+                  href="mailto:hi@taja.com"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-                  hi@blockroll.com
+                  hi@taja.com
                 </a>
               </p>
               <p>
                 <strong>Platform:</strong>{" "}
                 <a
-                  href="https://blockroll.com"
+                  href="https://taja.com"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  blockroll.com
+                  taja.com
                 </a>
               </p>
             </div>
@@ -982,7 +976,7 @@ export default function PrivacyPolicyPage() {
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-[#252525] text-center text-[#b1b1b1]">
           <p className="text-sm">
-            © {new Date().getFullYear()} BlockRoll. All rights reserved.
+            © {new Date().getFullYear()} Taja. All rights reserved.
           </p>
         </div>
       </div>

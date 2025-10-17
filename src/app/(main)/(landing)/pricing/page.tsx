@@ -7,41 +7,41 @@ import { motion } from "framer-motion";
 import { Check, CornerDownRight, Target, Terminal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-const BlockRollFeatures = [
+const TajaFeatures = [
   {
     id: 1,
-    title: "Secure File Storage & Sharing",
+    title: "WhatsApp Commerce Platform",
     description:
-      "Store and share files with complete ownership and bank-level security. Built on BlockDAG blockchain with client-side encryption.",
+      "Shop and sell through WhatsApp conversations with complete security. AI-powered product search and secure payments.",
     features: [
-      "Non-custodial storage - you own your data",
-      "Client-side encryption before upload",
-      "Share files by wallet address",
-      "Set expiry dates and revoke access",
-      "Emergency access for digital inheritance",
+      "Non-custodial commerce - you own your store",
+      "AI-powered product search by image or text",
+      "Secure payments through WhatsApp",
+      "Digital receipts and order tracking",
+      "Emergency access for business continuity",
     ],
   },
   {
     id: 2,
-    title: "Real-Time Collaboration",
+    title: "AI-Powered Customer Service",
     description:
-      "Work with teams securely using our workspace features and real-time updates powered by WebSocket technology.",
+      "Provide instant customer support through WhatsApp with AI-powered assistance and real-time order management.",
     features: [
-      "Create secure team workspaces",
-      "Role-based permissions",
-      "Real-time notifications",
-      "Activity tracking and audit logs",
-      "Multi-device session management",
+      "AI chatbot handles customer inquiries",
+      "Real-time order notifications",
+      "Automated product recommendations",
+      "Order tracking and status updates",
+      "Multi-language support",
     ],
   },
   {
     id: 3,
     title: "Developer SDKs & API",
     description: [
-      "Integrate BlockRoll into your applications with our comprehensive SDKs and REST API.",
+      "Integrate Taja into your applications with our comprehensive SDKs and REST API for WhatsApp commerce.",
       "Available for React, Vue, and vanilla JavaScript with full TypeScript support.",
       <>
-        Build secure file storage into any app with our{" "}
+        Build WhatsApp commerce into any app with our{" "}
         <Link href="/developers" className="hover:underline text-[#a472ea]">
           developer tools.
         </Link>
@@ -54,27 +54,27 @@ const BlockRollFeatures = [
 const whySub = [
   {
     content:
-      "Early access pricing - Get premium features at 50% off during our launch period",
+      "Early access pricing - Get premium WhatsApp commerce features at 50% off during our launch period",
   },
   {
     content:
-      "Bank-level security (95/100 rating) with 20+ enterprise security features",
+      "Bank-level security (95/100 rating) with 20+ enterprise security features for commerce",
   },
   {
     content:
-      "AI-powered WhatsApp support bot available 24/7 for all premium users",
+      "AI-powered WhatsApp commerce bot available 24/7 for all premium users",
   },
   {
-    content: "True data ownership - your files, your keys, your control",
+    content: "True store ownership - your products, your customers, your control",
   },
 ];
 
 const freePlanCard = {
   whatYouGetImmediately: [
-    "1GB secure file storage",
-    "Basic file sharing by wallet address",
-    "Client-side encryption",
-    "Basic workspace (up to 3 members)",
+    "Up to 50 product listings",
+    "Basic AI product search",
+    "WhatsApp commerce bot",
+    "Basic store management",
   ],
   whatYouGetAfterLaunch: [
     "Everything mentioned above",
@@ -86,18 +86,18 @@ const freePlanCard = {
 const premiumPlanCard = {
   whatYouGetImmediately: [
     "Everything in free plan +",
-    "100GB secure file storage",
-    "Advanced sharing controls & permissions",
-    "Unlimited workspaces & team members",
+    "Unlimited product listings",
+    "Advanced AI product search & recommendations",
+    "Unlimited WhatsApp stores & team members",
     "Priority API access (10,000 requests/month)",
-    "AI-powered WhatsApp support bot",
-    "Advanced security features & monitoring",
-    "Real-time collaboration tools",
+    "AI-powered WhatsApp commerce bot",
+    "Advanced analytics & customer insights",
+    "Real-time order management",
   ],
   whatYouGetAfterLaunch: [
     "Everything mentioned above",
-    "Custom storage limits",
-    "White-label SDK options",
+    "Custom store limits",
+    "White-label WhatsApp commerce options",
     "Enterprise security compliance",
     "Dedicated support channel",
   ],
@@ -122,12 +122,12 @@ const Pricing = () => {
                 }}
                 className="text-center text-3xl tracking-tight font-medium"
               >
-                What makes BlockRoll different?
+                What makes Taja different?
               </motion.h2>
             </div>
             <div className=" w-full h-full flex flex-col gap-6  border-b border-[#252525]">
               <ul className="flex flex-col lg:flex-row [&>li]:w-full  [&>li]:p-6 divide-y lg:divide-y-0 lg:divide-x divide-[#252525] h-full ">
-                {BlockRollFeatures.map((feature, index) => {
+                {TajaFeatures.map((feature, index) => {
                   return (
                     <motion.li
                       initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
@@ -198,7 +198,7 @@ const Pricing = () => {
                 }}
                 className="text-center text-3xl tracking-tight font-medium"
               >
-                Why choose BlockRoll Premium?
+                Why choose Taja Premium?
               </motion.h2>
             </div>
             <div className="w-full border-b border-[#252525]">
@@ -245,10 +245,10 @@ const Pricing = () => {
           <div className=" border-b border-[#252525] text-center py-4 font-bold px-4">
             For any doubts or queries, feel free to ping us at{" "}
             <Link
-              href="mailto:support@blockroll.io"
+              href="mailto:support@taja.io"
               className="hover:underline bg-gradient-to-b from-[#a472ea] via-[#a472ea]/80 to-[#432ba0] bg-clip-text text-transparent"
             >
-              support@blockroll.io
+              support@taja.io
             </Link>
           </div>
         </div>
@@ -291,7 +291,7 @@ const PricingCard = () => {
             </div>
             <div className="w-full border-dashed border-border-primary px-6 lg:px-10 py-4 ">
               <div className="">
-                <Link href="/dashboard" className="cursor-pointer z-30">
+                <Link href="#pricing" className="cursor-pointer z-30">
                   <PrimaryButton classname="w-full">
                     <Terminal />
                     Get Started
@@ -424,7 +424,7 @@ const PremiumTestimonialCard = ({
       <p className="text-xl">{username}</p>
       {showPremium && (
         <div className="bg-gradient-to-b from-[#ad84e7] via-[#986cd6] to-[#432d8e] bg-clip-text text-transparent">
-          <p className="">BlockRoll Premium</p>
+          <p className="">Taja Premium</p>
         </div>
       )}
     </div>
@@ -437,14 +437,14 @@ const TestimonialsSection = () => {
       id: 1,
       username: "Sarah Chen",
       content:
-        "BlockRoll Premium has revolutionized how our team handles sensitive documents. The bank-level security gives us peace of mind, and the real-time collaboration features make remote work seamless. The AI support bot is incredibly helpful - it's like having a security expert available 24/7. The non-custodial approach means we truly own our data, which is crucial for our legal practice.",
+        "Taja Premium has revolutionized how our team handles sensitive documents. The bank-level security gives us peace of mind, and the real-time collaboration features make remote work seamless. The AI support bot is incredibly helpful - it's like having a security expert available 24/7. The non-custodial approach means we truly own our data, which is crucial for our legal practice.",
       column: 1,
     },
     {
       id: 2,
       username: "Marcus Rodriguez",
       content:
-        "As a healthcare provider, data security is paramount. BlockRoll's client-side encryption and audit logs help us maintain HIPAA compliance while providing our patients with secure document sharing. The emergency access feature is brilliant for continuity of care. Highly recommend for any healthcare organization.",
+        "As a healthcare provider, data security is paramount. Taja's client-side encryption and audit logs help us maintain HIPAA compliance while providing our patients with secure document sharing. The emergency access feature is brilliant for continuity of care. Highly recommend for any healthcare organization.",
       column: 1,
     },
     {
@@ -453,7 +453,7 @@ const TestimonialsSection = () => {
       content: (
         <div className="space-y-3 text-pretty">
           <p>
-            BlockRoll Premium has been a game-changer for our startup. Here&apos;s
+            Taja Premium has been a game-changer for our startup. Here&apos;s
             why it stands out:
           </p>
           <ul className="list-disc space-y-3 pl-6">
@@ -492,14 +492,14 @@ const TestimonialsSection = () => {
       id: 4,
       username: "Dr. Emily Watson",
       content:
-        "The emergency access feature saved our research project when our lead researcher was unavailable. BlockRoll's security features are exactly what we needed for our confidential medical research data. Excellent platform!",
+        "The emergency access feature saved our research project when our lead researcher was unavailable. Taja's security features are exactly what we needed for our confidential medical research data. Excellent platform!",
       column: 3,
     },
     {
       id: 5,
       username: "James Park",
       content:
-        "We migrated from Google Drive to BlockRoll and couldn't be happier. The client-side encryption means our sensitive client documents are never exposed to third parties. The team collaboration features are intuitive, and the audit logs provide the compliance trail we need. The Web3 integration fits perfectly with our blockchain consulting business.",
+        "We migrated from Google Drive to Taja and couldn't be happier. The client-side encryption means our sensitive client documents are never exposed to third parties. The team collaboration features are intuitive, and the audit logs provide the compliance trail we need. The Web3 integration fits perfectly with our blockchain consulting business.",
       column: 3,
     },
   ];

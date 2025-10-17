@@ -91,12 +91,12 @@ export class IPFSService {
       const nft = {
         image: nftFile,
         name: file.name,
-        description: `File uploaded to BlockRoll: ${file.name}`,
+        description: `File uploaded to Taja: ${file.name}`,
         properties: {
           type: file.type,
           size: file.size,
           uploadedAt: new Date().toISOString(),
-          platform: "BlockRoll"
+          platform: "Taja"
         }
       }
       
@@ -151,12 +151,12 @@ export class IPFSService {
       const nft = {
         image: nftFile,
         name: fileName,
-        description: `Encrypted file uploaded to BlockRoll: ${fileName}`,
+        description: `Encrypted file uploaded to Taja: ${fileName}`,
         properties: {
           type: mimeType,
           size: fileBuffer.byteLength,
           uploadedAt: new Date().toISOString(),
-          platform: "BlockRoll",
+          platform: "Taja",
           encrypted: true
         }
       }
@@ -228,7 +228,7 @@ export class IPFSService {
       console.log('✅ Test client created successfully')
       
       // Create a simple test file
-      const testContent = 'Hello from BlockRoll test upload!'
+      const testContent = 'Hello from Taja test upload!'
       const testFile = new File([testContent], 'test.txt', { type: 'text/plain' })
       console.log('📄 Test file created:', testFile.name, testFile.size, 'bytes')
       
@@ -236,7 +236,7 @@ export class IPFSService {
       console.log('📤 Attempting test upload using store() method...')
       const nft = {
         image: testFile,
-        name: 'BlockRoll Test File',
+        name: 'Taja Test File',
         description: 'Test upload to verify NFT.Storage connection',
         properties: {
           type: 'text/plain',

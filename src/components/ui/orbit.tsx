@@ -34,7 +34,7 @@ export default function OrbitComponent() {
         transition={{ duration: 0.3 }}
         className="absolute inset-[90px] rounded-full  text-white font-bold text-lg -z-0 flex items-center justify-center"
       >
-        <p className="text-3xl tracking-tighter">BlockRoll</p>
+        <p className="text-3xl tracking-tighter">Taja</p>
       </motion.div>
 
       <motion.div

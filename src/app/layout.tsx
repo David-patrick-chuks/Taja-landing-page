@@ -1,8 +1,8 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
-import { Analytics } from "@vercel/analytics/next"
 
 const dmReg = localFont({
   src: "./fonts/DMMono-Regular.ttf",
@@ -15,8 +15,8 @@ const dmMed = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "BlockRoll - Own. Encrypt. Share. Control.",
-  description: "Secure, decentralized file storage and sharing built on BlockDAG. True ownership with bank-level security.",
+  title: "Taja - Chat. Shop. Sell.",
+  description: "Shop & sell through WhatsApp conversations with Taja. No apps, no websites — just chat, browse products, and complete secure payments.",
   icons: {
     icon: "/images/os-image.ico",
   },

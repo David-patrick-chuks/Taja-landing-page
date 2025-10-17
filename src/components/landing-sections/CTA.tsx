@@ -21,7 +21,7 @@ const CTA = () => {
           Start your free WhatsApp store on taja. No apps, no websites — just chat.
         </p>
       </div>
-      <Link href="/dashboard" className="cursor-pointer z-30">
+      <Link href="#features" className="cursor-pointer z-30">
         <PrimaryButtom>
           <Terminal />
           Start Free Today

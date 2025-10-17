@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-// File filter types for BlockRoll
+// File filter types for Taja
 export interface FileFilters {
   fileType?: string; // e.g., "image", "document", "video", etc.
   accessType?: "public" | "private"; // File access level

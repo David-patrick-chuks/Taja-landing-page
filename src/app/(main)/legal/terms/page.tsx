@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 
 export default function TermsOfServicePage() {
   return (
@@ -18,10 +17,10 @@ export default function TermsOfServicePage() {
           {/* Introduction */}
           <section>
             <p className="text-lg">
-              Welcome to BlockRoll.ai ("BlockRoll," "we," "us," or "our").
+              Welcome to Taja.ai ("Taja," "we," "us," or "our").
               Please read these Terms of Service ("Terms") carefully as they
               govern your use of our platform, website, and services. By
-              accessing or using BlockRoll.ai, you agree to be bound by these
+              accessing or using Taja.ai, you agree to be bound by these
               Terms. If you do not agree to these Terms, please do not use our
               Services.
             </p>
@@ -29,10 +28,10 @@ export default function TermsOfServicePage() {
               For questions or concerns regarding these Terms, please contact us
               at:{" "}
               <a
-                href="mailto:hi@BlockRoll.ai"
+                href="mailto:hi@Taja.ai"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
-                hi@BlockRoll.ai
+                hi@Taja.ai
               </a>
             </p>
           </section>
@@ -43,26 +42,18 @@ export default function TermsOfServicePage() {
               1. Description of Service
             </h2>
             <p className="mb-4">
-              BlockRoll.ai is a platform designed to help developers discover
-              and contribute to open-source projects efficiently. Our Services
-              include:
+              Taja.ai is a WhatsApp-first commerce platform designed to help businesses sell and customers shop through WhatsApp conversations.
+              Our Services include:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li>
-                <strong>Search and Discovery:</strong> Search and filter
-                thousands of open-source projects by programming language, tech
-                stack, activity level, competition, and niche areas (AI, Core
-                ML, Web3, etc.)
+                <strong>WhatsApp Commerce:</strong> Sell products and services directly through WhatsApp conversations with AI-powered assistance
               </li>
               <li>
-                <strong>Project Information:</strong> View project details,
-                beginner-friendly tasks, issue counts, and contribution
-                opportunities
+                <strong>AI Product Search:</strong> Customers can find products by uploading images or describing what they want using AI
               </li>
               <li>
-                <strong>Premium Features:</strong> Access to personalized
-                mentoring, exclusive newsletter, open-source jobs and internship
-                opportunities, and our 30-day contribution challenge
+                <strong>Secure Payments:</strong> Complete purchases through chat with end-to-end encrypted transactions and digital receipts
               </li>
             </ul>
           </section>
@@ -140,7 +131,7 @@ export default function TermsOfServicePage() {
               4. Premium Subscription Services
             </h2>
             <p className="mb-4">
-              BlockRoll.ai offers premium subscription plans with enhanced
+              Taja.ai offers premium subscription plans with enhanced
               features including:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
@@ -205,7 +196,7 @@ export default function TermsOfServicePage() {
               6. Third-Party Content and Links
             </h2>
             <p>
-              BlockRoll.ai aggregates information about open-source projects
+              Taja.ai aggregates information about open-source projects
               hosted on third-party platforms (GitHub, GitLab, etc.). We are not
               responsible for:
             </p>
@@ -366,7 +357,7 @@ export default function TermsOfServicePage() {
             </ul>
             <p className="mt-4">
               Our total liability shall not exceed the amount you paid to
-              BlockRoll.ai in the twelve (12) months preceding the claim, or
+              Taja.ai in the twelve (12) months preceding the claim, or
               $100, whichever is greater.
             </p>
           </section>
@@ -459,7 +450,7 @@ export default function TermsOfServicePage() {
             <ol className="list-decimal list-inside space-y-2 ml-4">
               <li>
                 <strong>Informal Resolution:</strong> Contact us at
-                hi@BlockRoll.ai to attempt good-faith resolution
+                hi@Taja.ai to attempt good-faith resolution
               </li>
               <li>
                 <strong>Binding Arbitration:</strong> If informal resolution
@@ -476,7 +467,7 @@ export default function TermsOfServicePage() {
             <p className="mb-4">
               <strong>Entire Agreement:</strong> These Terms, along with our
               Privacy Policy, constitute the entire agreement between you and
-              BlockRoll.ai.
+              Taja.ai.
             </p>
             <p className="mb-4">
               <strong>Severability:</strong> If any provision of these Terms is
@@ -508,10 +499,10 @@ export default function TermsOfServicePage() {
               <p>
                 <strong>Email:</strong>{" "}
                 <a
-                  href="mailto:hi@BlockRoll.ai"
+                  href="mailto:hi@Taja.ai"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-                  hi@BlockRoll.ai
+                  hi@Taja.ai
                 </a>
               </p>
               <p>
@@ -522,7 +513,7 @@ export default function TermsOfServicePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  BlockRoll.ai
+                  Taja.ai
                 </a>
               </p>
             </div>

@@ -10,28 +10,28 @@ import OrbitComponent from '../ui/orbit'
 
 let notifications = [
     {
-        name: "File Uploaded Successfully",
-        description: "document.pdf • 2.4 MB",
-        icon: <div className="text-2xl">🔒</div>,
+        name: "Product Listed Successfully",
+        description: "Vintage Jacket • $45",
+        icon: <div className="text-2xl">🛍️</div>,
         color: "#8B5CF6",
     },
     {
-        name: "New Share Request",
-        description: "0x742d...89Ab wants access",
-        icon: <div className="text-2xl">👤</div>,
+        name: "New Order Received",
+        description: "Customer wants to buy",
+        icon: <div className="text-2xl">🛒</div>,
         color: "#101010",
     },
     {
-        name: "Security Alert",
-        description: "New device detected",
-        icon: <div className="text-2xl">🛡️</div>,
-        color: "#EF4444",
+        name: "Payment Confirmed",
+        description: "Order #1234 completed",
+        icon: <div className="text-2xl">✅</div>,
+        color: "#10B981",
     },
     {
-        name: "File Shared",
-        description: "presentation.pdf with 3 users",
-        icon: <div className="text-2xl">📤</div>,
-        color: "#10B981",
+        name: "Product Found",
+        description: "AI matched your search",
+        icon: <div className="text-2xl">🔍</div>,
+        color: "#F59E0B",
     },
 ];
 

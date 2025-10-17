@@ -1,4 +1,4 @@
-// BlockRoll Constants
+// Taja Constants
 
 export const THEME_CONFIG = {
   light: "light",
@@ -8,7 +8,7 @@ export const THEME_CONFIG = {
 export const APP_CONFIG = {
   API_URL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000",
   WS_URL: process.env.NEXT_PUBLIC_WS_URL || "http://localhost:5000",
-  GITHUB_URL: "https://github.com/BlockRoll",
+  GITHUB_URL: "https://github.com/Taja",
   TWITTER_URL: "",
   DOCS_URL: "",
 } as const;

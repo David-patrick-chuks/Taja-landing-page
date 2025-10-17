@@ -69,7 +69,7 @@ const Navbar = () => {
       </div>
       <div className="flex items-center ">
 
-        <Link href="/login" className="cursor-pointer z-30">
+        <Link href="#features" className="cursor-pointer z-30">
           <PrimaryButtom>
             <Terminal />
             Get Started

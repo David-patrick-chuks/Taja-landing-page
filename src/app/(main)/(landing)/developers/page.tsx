@@ -4,24 +4,24 @@ import PrimaryButton from "@/components/ui/custom-button";
 import Header from "@/components/ui/header";
 import { motion } from "framer-motion";
 import {
-  Bell,
-  Box,
-  Boxes,
-  Check,
-  Code,
-  Copy,
-  CornerDownRight,
-  Download,
-  FileCode,
-  Package,
-  Rocket,
-  Share2,
-  Shield,
-  Terminal,
-  Trash2,
-  Upload,
-  Users,
-  Zap,
+    Bell,
+    Box,
+    Boxes,
+    Check,
+    Code,
+    Copy,
+    CornerDownRight,
+    Download,
+    FileCode,
+    Package,
+    Rocket,
+    Share2,
+    Shield,
+    Terminal,
+    Trash2,
+    Upload,
+    Users,
+    Zap,
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -31,43 +31,76 @@ const SDKOptions = [
     id: 1,
     icon: <Code className="size-10" />,
     title: "React SDK",
-    subtitle: "@blockroll/react-sdk",
+    subtitle: "@taja/react-sdk",
     description:
       "Perfect for React and Next.js applications. Includes powerful hooks and context providers for seamless integration.",
     features: [
-      "React hooks (useBlockRoll, useMyFiles, etc.)",
+      "React hooks (useTaja, useMyStore, etc.)",
       "TypeScript support with full type definitions",
       "SSR support for Next.js applications",
       "Automatic state management",
       "Real-time WebSocket updates",
     ],
-    installation: "npm install @blockroll/react-sdk",
-    codeExample: `import { BlockRollProvider, useBlockRoll } from '@blockroll/react-sdk';
+    installation: "npm install @taja/react-sdk",
+    codeExample: `import { TajaProvider, useTaja } from '@taja/react-sdk';
 
 function App() {
   return (
-    <BlockRollProvider apiKey={process.env.NEXT_PUBLIC_BLOCKROLL_API_KEY}>
+    <TajaProvider apiKey={process.env.NEXT_PUBLIC_TAJA_API_KEY}>
       <YourApp />
-    </BlockRollProvider>
+    </TajaProvider>
   );
 }
 
-function UploadButton() {
-  const { uploadFile, loading } = useBlockRoll();
+function CommerceButton() {
+  const { 
+    listProduct, 
+    searchProducts, 
+    processOrder, 
+    getStoreAnalytics,
+    loading 
+  } = useTaja();
 
-  const handleUpload = async (file: File) => {
-    const result = await uploadFile({
-      file,
-      accessType: 'private',
-      encryption: true,
+  const handleListProduct = async (productData) => {
+    const result = await listProduct({
+      name: productData.name,
+      price: productData.price,
+      images: productData.images,
+      description: productData.description,
+      category: productData.category,
     });
-    console.log('Uploaded:', result.fileId);
+    console.log('Product listed:', result.productId);
+  };
+
+  const handleSearchProducts = async (searchQuery) => {
+    const results = await searchProducts({
+      query: searchQuery,
+      filters: { category: 'electronics', maxPrice: 100 }
+    });
+    console.log('Found products:', results);
+  };
+
+  const handleProcessOrder = async (orderData) => {
+    const result = await processOrder({
+      productId: orderData.productId,
+      customerId: orderData.customerId,
+      paymentMethod: 'whatsapp'
+    });
+    console.log('Order processed:', result.orderId);
   };
 
   return (
-    <button onClick={() => handleUpload(file)} disabled={loading}>
-      {loading ? 'Uploading...' : 'Upload File'}
+    <div className="space-y-4">
+      <button onClick={() => handleListProduct(productData)} disabled={loading}>
+        {loading ? 'Listing...' : 'List Product'}
+      </button>
+      <button onClick={() => handleSearchProducts('vintage jacket')} disabled={loading}>
+        {loading ? 'Searching...' : 'Search Products'}
+      </button>
+      <button onClick={() => handleProcessOrder(orderData)} disabled={loading}>
+        {loading ? 'Processing...' : 'Process Order'}
     </button>
+    </div>
   );
 }`,
   },
@@ -75,7 +108,7 @@ function UploadButton() {
     id: 2,
     icon: <Box className="size-10" />,
     title: "Vue SDK",
-    subtitle: "@blockroll/vue-sdk",
+    subtitle: "@taja/vue-sdk",
     description:
       "Built for Vue.js and Nuxt applications with Composition API. Reactive state management and seamless Vue integration.",
     features: [
@@ -85,25 +118,45 @@ function UploadButton() {
       "Reactive state with Vue's reactivity system",
       "Real-time updates with WebSocket",
     ],
-    installation: "npm install @blockroll/vue-sdk",
+    installation: "npm install @taja/vue-sdk",
     codeExample: `<script setup>
-import { useBlockRoll } from '@blockroll/vue-sdk';
+import { useTaja } from '@taja/vue-sdk';
 
-const { uploadFile, loading } = useBlockRoll();
+const { 
+  listProduct, 
+  searchProducts, 
+  processOrder,
+  getStoreAnalytics,
+  loading 
+} = useTaja();
 
-const handleUpload = async (file) => {
-  const result = await uploadFile({
-    file,
-    accessType: 'private',
-    encryption: true,
+const handleListProduct = async (productData) => {
+  const result = await listProduct({
+    name: productData.name,
+    price: productData.price,
+    images: productData.images,
+    description: productData.description,
+    category: productData.category,
   });
-  console.log('Uploaded:', result.fileId);
+  console.log('Product listed:', result.productId);
+};
+
+const handleSearchProducts = async (searchQuery) => {
+  const results = await searchProducts({
+    query: searchQuery,
+    filters: { category: 'electronics', maxPrice: 100 }
+  });
+  console.log('Found products:', results);
+};
 };
 </script>
 
 <template>
-  <button @click="handleUpload(file)" :disabled="loading">
-    {{ loading ? 'Uploading...' : 'Upload File' }}
+  <button @click="handleListProduct(productData)" :disabled="loading">
+    {{ loading ? 'Listing...' : 'List Product' }}
+  </button>
+  <button @click="handleSearchProducts('vintage jacket')" :disabled="loading">
+    {{ loading ? 'Searching...' : 'Search Products' }}
   </button>
 </template>`,
   },
@@ -117,35 +170,52 @@ const handleUpload = async (file) => {
     features: [
       "Works anywhere - HTML, WordPress, PHP",
       "No build tools or bundlers needed",
-      "Global BlockRoll class available",
+      "Global Taja class available",
       "TypeScript definitions included",
       "Real-time WebSocket support",
     ],
     installation:
-      '<script src="https://cdn.jsdelivr.net/npm/@blockroll/cdn@latest/dist/blockroll.min.js"></script>',
+      '<script src="https://cdn.jsdelivr.net/npm/@taja/cdn@latest/dist/taja.min.js"></script>',
     codeExample: `<!DOCTYPE html>
 <html>
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/@blockroll/cdn@latest/dist/blockroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@taja/cdn@latest/dist/taja.min.js"></script>
 </head>
 <body>
   <input type="file" id="fileInput" />
   <button onclick="upload()">Upload</button>
 
   <script>
-    const blockroll = new BlockRoll({
+    const taja = new Taja({
       apiKey: 'YOUR_API_KEY',
       realtime: true,
     });
 
-    async function upload() {
-      const file = document.getElementById('fileInput').files[0];
-      const result = await blockroll.files.upload({
-        file,
-        accessType: 'private',
-        encryption: true,
+    async function handleCommerce() {
+      // List a product
+      const productResult = await taja.store.listProduct({
+        name: "Vintage Jacket",
+        price: 45,
+        images: [document.getElementById('imageInput').files[0]],
+        description: "Beautiful vintage jacket in excellent condition",
+        category: "clothing"
       });
-      console.log('Uploaded:', result.fileId);
+      console.log('Product listed:', productResult.productId);
+
+      // Search products
+      const searchResults = await taja.store.searchProducts({
+        query: "vintage jacket",
+        filters: { category: "clothing", maxPrice: 100 }
+      });
+      console.log('Found products:', searchResults);
+
+      // Process an order
+      const orderResult = await taja.store.processOrder({
+        productId: productResult.productId,
+        customerId: "customer123",
+        paymentMethod: "whatsapp"
+      });
+      console.log('Order processed:', orderResult.orderId);
     }
   </script>
 </body>
@@ -156,62 +226,82 @@ const handleUpload = async (file) => {
 const APIOperations = [
   {
     icon: <Upload className="size-5" />,
-    name: "Upload File",
-    description: "Upload files with client-side encryption",
+    name: "List Product",
+    description: "Add products to your WhatsApp store with images and details",
   },
   {
     icon: <Download className="size-5" />,
-    name: "Download File",
-    description: "Download and decrypt files securely",
+    name: "Search Products",
+    description: "AI-powered product search by image, text, or voice",
   },
   {
     icon: <Share2 className="size-5" />,
-    name: "Share File",
-    description: "Share files by wallet address with permissions",
+    name: "Process Order",
+    description: "Handle customer orders and payments through WhatsApp",
   },
   {
     icon: <FileCode className="size-5" />,
-    name: "List Files",
-    description: "Get all files with pagination and filters",
+    name: "Manage Store",
+    description: "View analytics, manage inventory, and update product info",
   },
   {
     icon: <Users className="size-5" />,
-    name: "Workspaces",
-    description: "Create and manage team workspaces",
+    name: "Customer Support",
+    description: "AI-powered chatbot for customer inquiries and support",
   },
   {
     icon: <Bell className="size-5" />,
-    name: "Notifications",
-    description: "Real-time notifications via WebSocket",
+    name: "Order Notifications",
+    description: "Real-time order updates and status notifications",
   },
   {
     icon: <Shield className="size-5" />,
-    name: "Revoke Access",
-    description: "Revoke file access from any wallet",
+    name: "Secure Payments",
+    description: "End-to-end encrypted payment processing and receipts",
   },
   {
     icon: <Trash2 className="size-5" />,
-    name: "Delete File",
-    description: "Permanently delete files from storage",
+    name: "Remove Product",
+    description: "Remove products from your store or mark as unavailable",
+  },
+  {
+    icon: <Package className="size-5" />,
+    name: "Inventory Management",
+    description: "Track stock levels and manage product availability",
+  },
+  {
+    icon: <Rocket className="size-5" />,
+    name: "Store Analytics",
+    description: "Get insights on sales, customer behavior, and performance",
+  },
+  {
+    icon: <Check className="size-5" />,
+    name: "Order Tracking",
+    description: "Track order status and provide updates to customers",
+  },
+  {
+    icon: <Zap className="size-5" />,
+    name: "AI Recommendations",
+    description: "Generate product recommendations for customers",
   },
 ];
 
-const WhyBlockRollKit = [
+const WhyTajaKit = [
   {
     content:
-      "API Key-Based Authentication - Your wallet is automatically tied to your API key, no need to pass wallet addresses",
+      "API Key-Based Authentication - Your WhatsApp store is automatically tied to your API key, no complex setup needed",
   },
   {
     content:
-      "Real-time Updates - Built-in WebSocket support for instant notifications and file updates",
+      "Real-time Updates - Built-in WebSocket support for instant order notifications and store updates",
   },
   {
     content:
-      "Type-Safe - Full TypeScript support with autocomplete and type definitions",
+      "Type-Safe - Full TypeScript support with autocomplete and type definitions for commerce operations",
   },
   {
     content:
-      "Production Ready - Battle-tested code with error handling and best practices",
+      "Production Ready - Battle-tested code with error handling and best practices for WhatsApp commerce",
   },
 ];
 
@@ -220,9 +310,9 @@ const GetStartedSteps = [
     step: 1,
     title: "Get Your API Key",
     description:
-      "Sign in to your BlockRoll dashboard and generate an API key from the SDK settings.",
-    link: "/dashboard/sdk",
-    linkText: "Go to Dashboard",
+      "Get your API key from the Taja platform and start building WhatsApp commerce features.",
+    link: "#sdks",
+    linkText: "View SDKs",
   },
   {
     step: 2,
@@ -236,7 +326,7 @@ const GetStartedSteps = [
     step: 3,
     title: "Start Building",
     description:
-      "Follow our code examples and start integrating secure file storage into your application.",
+      "Follow our code examples and start integrating WhatsApp commerce into your application.",
     link: "#examples",
     linkText: "See Examples",
   },
@@ -246,7 +336,7 @@ const Developers = () => {
   return (
     <>
       <main className="w-full overflow-hidden flex flex-col items-center justify-center relative">
-        <Header title="BlockRoll Kit - Developer Documentation" />
+        <Header title="Taja Kit - Developer Documentation" />
         <div className="flex flex-col bg-[#151515]/20 backdrop-blur-xl relative w-full">
           {/* Introduction Section */}
           <div className="h-full relative">
@@ -275,15 +365,14 @@ const Developers = () => {
                 }}
                 className="text-center text-lg mt-4 text-gray-400 max-w-2xl mx-auto px-4"
               >
-                Integrate blockchain-based secure file storage into any
-                application with our comprehensive SDKs
+                Integrate WhatsApp commerce into any application with our comprehensive SDKs
               </motion.p>
             </div>
 
-            {/* Why BlockRoll Kit */}
+            {/* Why Taja Kit */}
             <div className="w-full border-b border-[#252525]">
               <div className="w-full max-w-3xl mx-auto border-b lg:border-b-0 lg:border-x border-[#252525] p-6 font-medium space-y-3">
-                {WhyBlockRollKit.map((item, index) => (
+                {WhyTajaKit.map((item, index) => (
                   <motion.p
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -347,7 +436,7 @@ const Developers = () => {
               </motion.h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-b border-[#252525]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 border-b border-[#252525]">
               {APIOperations.map((operation, index) => (
                 <motion.div
                   initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
@@ -359,7 +448,7 @@ const Developers = () => {
                     delay: 1.1 + index * 0.05,
                   }}
                   key={index}
-                  className="p-6 border-b md:border-r lg:border-r-0 lg:odd:border-r border-[#252525] flex flex-col gap-3"
+                  className="p-6 border-b md:border-r lg:border-r-0 lg:odd:border-r xl:border-r-0 xl:odd:border-r border-[#252525] flex flex-col gap-3"
                 >
                   <div className="text-[#a472ea]">{operation.icon}</div>
                   <h3 className="text-lg font-semibold">{operation.name}</h3>
@@ -456,27 +545,27 @@ const Developers = () => {
                   title: "API Documentation",
                   description: "Complete API reference with all methods",
                   icon: <Code className="size-6" />,
-                  link: "/dashboard/sdk",
+                  link: "#sdks",
                 },
                 {
                   title: "GitHub Repository",
                   description: "View source code and contribute",
                   icon: <Package className="size-6" />,
-                  link: "https://github.com/blockroll",
+                  link: "https://github.com/taja",
                   external: true,
                 },
                 {
                   title: "NPM Packages",
                   description: "Install SDKs from NPM registry",
                   icon: <Download className="size-6" />,
-                  link: "https://www.npmjs.com/search?q=%40blockroll",
+                  link: "https://www.npmjs.com/search?q=%40taja",
                   external: true,
                 },
                 {
                   title: "Community Support",
                   description: "Get help from the community on Discord",
                   icon: <Users className="size-6" />,
-                  link: "https://discord.gg/blockroll",
+                  link: "https://discord.gg/taja",
                   external: true,
                 },
               ].map((resource, index) => (
@@ -516,18 +605,18 @@ const Developers = () => {
           <div className="border-b border-[#252525] text-center py-8 px-4">
             <h3 className="text-2xl font-bold mb-4">Ready to Build?</h3>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Join developers building secure, decentralized applications with
-              BlockRoll Kit. Get your API key and start integrating today.
+              Join developers building WhatsApp commerce applications with
+              Taja Kit. Get your API key and start integrating today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/dashboard/sdk">
+              <Link href="#sdks">
                 <PrimaryButton classname="min-w-[200px]">
                   <Terminal />
-                  Get API Key
+                  Get Started
                 </PrimaryButton>
               </Link>
               <Link
-                href="https://github.com/blockroll"
+                href="https://github.com/taja"
                 target="_blank"
                 className="text-[#a472ea] hover:underline font-semibold flex items-center gap-2"
               >
@@ -541,10 +630,10 @@ const Developers = () => {
           <div className="border-b border-[#252525] text-center py-4 font-bold px-4">
             Need help? Contact us at{" "}
             <Link
-              href="mailto:developers@blockroll.io"
+              href="mailto:developers@taja.io"
               className="hover:underline bg-gradient-to-b from-[#a472ea] via-[#a472ea]/80 to-[#432ba0] bg-clip-text text-transparent"
             >
-              developers@blockroll.io
+              developers@taja.io
             </Link>
           </div>
         </div>

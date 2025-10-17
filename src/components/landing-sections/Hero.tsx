@@ -22,15 +22,6 @@ const Hero = () => {
           transition={{ duration: 1, ease: "easeOut", type: "spring" }}
           className="flex items-center justify-center gap-2 mb-4"
         >
-          <div className="hidden items-center gap-2 px-4 py-2 rounded-md bg-black/40 backdrop-blur-sm border border-[#252525]">
-            <span className="text-[#e1e1e1] text-sm font-medium">Powered by</span>
-            <div className="flex items-center gap-1.5">
-              <div className="w-5 h-5 bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] rounded flex items-center justify-center">
-                <span className="text-white text-xs font-bold">B</span>
-              </div>
-              <span className="text-white text-sm font-medium">lockDAG</span>
-            </div>
-          </div>
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
@@ -38,7 +29,7 @@ const Hero = () => {
           transition={{ duration: 1.2, ease: "easeOut", type: "spring" }}
           className="text-5xl text-[2.8rem] lg:text-7xl lg:text-[6rem] font-medium tracking-tighter"
         >
-          WhatsApp-first commerce platform
+          Chat. Shop. Sell.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
@@ -65,7 +56,7 @@ const Hero = () => {
         }}
         className="cursor-pointer z-30"
       >
-        <Link href="/login" className="block">
+        <Link href="#features" className="block">
           <PrimaryButtom>
             <Shield className="w-5 h-5" />
             Start Free Today

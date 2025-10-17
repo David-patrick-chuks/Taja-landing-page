@@ -1,10 +1,10 @@
 "use client"
 import type React from "react"
 
-import { useEffect, useRef, useState } from "react"
+import { cn } from "@/lib/utils"
 import { easeOut, motion } from "framer-motion"
 import { Activity, ChartNoAxesColumn, TrendingDown, TrendingUp } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { useEffect, useRef, useState } from "react"
 import { Target, TechTags } from "../icons/icons"
 
 type Card = {
@@ -24,7 +24,7 @@ const SIMPLE_CARDS = [
                     <path d="M15.7359 11.5C15.3219 11.5 14.9859 11.836 14.9859 12.25L9.11592 15.341C9.04392 15.379 8.95792 15.379 8.88392 15.341L3.01392 12.25C3.01392 11.836 2.67792 11.5 2.26392 11.5C1.84992 11.5 1.51392 11.836 1.51392 12.25C1.51392 12.809 1.82092 13.317 2.31492 13.577L8.18392 16.667C8.43892 16.802 8.71992 16.87 8.99992 16.87C9.27992 16.87 9.55992 16.803 9.81492 16.668L15.6849 13.577C16.1789 13.317 16.4859 12.808 16.4859 12.25C16.4859 11.836 16.1499 11.5 15.7359 11.5Z" fill="#C5A2F4" />
                 </svg>
                 <div className="bg-gradient-to-r from-[#C5A2F4] via-[#fff] to-[#fff] bg-clip-text">
-                    <p className='text-transparent font-semibold text-sm '>Filter By: TECH STACK</p>
+                    <p className='text-transparent font-semibold text-sm '>Filter By: PRODUCT CATEGORY</p>
                 </div>
             </div>
             <TechTags />
@@ -36,7 +36,7 @@ const SIMPLE_CARDS = [
             <div className="flex items-center gap-1 ">
                 <Target />
                 <div className="bg-gradient-to-r from-[#4684de] via-[#fff] to-[#fff] bg-clip-text">
-                    <p className='text-transparent font-semibold text-sm '>Filter By: COMPETITION</p>
+                    <p className='text-transparent font-semibold text-sm '>Filter By: PRICE RANGE</p>
                 </div>
             </div>
 
@@ -49,7 +49,7 @@ const SIMPLE_CARDS = [
                   border-[#282828] border mx-0.5 h-[22px] gap-1.5 px-1.5 pr-2 text-xs
                  hover:text-brand"
                 >
-                    <TrendingUp className="text-red-600" />Very High
+                    <TrendingUp className="text-red-600" />$100+
                 </button>
                 <button
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-lg
@@ -59,7 +59,7 @@ const SIMPLE_CARDS = [
                   border-[#282828] border mx-0.5 h-[22px] gap-1.5 px-1.5 pr-2 text-xs
                  hover:text-brand"
                 >
-                    <TrendingUp className="text-green-600" /> Very Low
+                    <TrendingUp className="text-green-600" /> Under $25
                 </button>
                 <button
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-lg
@@ -69,7 +69,7 @@ const SIMPLE_CARDS = [
                   border-[#282828] border mx-0.5 h-[22px] gap-1.5 px-1.5 pr-2 text-xs
                  hover:text-brand"
                 >
-                    <ChartNoAxesColumn className="text-yellow-600" /> Moderate
+                    <ChartNoAxesColumn className="text-yellow-600" /> $25-50
                 </button>
                 <button
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-lg
@@ -79,7 +79,7 @@ const SIMPLE_CARDS = [
                   border-[#282828] border mx-0.5 h-[22px] gap-1.5 px-1.5 pr-2 text-xs
                  hover:text-brand"
                 >
-                    <TrendingDown className="text-blue-600" /> Low
+                    <TrendingDown className="text-blue-600" /> $50-100
                 </button>
                 <button
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-lg
@@ -89,7 +89,7 @@ const SIMPLE_CARDS = [
                   border-[#282828] border mx-0.5 h-[22px] gap-1.5 px-1.5 pr-2 text-xs
                  hover:text-brand"
                 >
-                    <TrendingUp className="text-orange-600" /> High
+                    <TrendingUp className="text-orange-600" /> $100+
                 </button>
 
 
@@ -103,7 +103,7 @@ const SIMPLE_CARDS = [
             <div className="flex items-center gap-1 ">
                 <Activity className="text-green-600 size-4" />
                 <div className="bg-gradient-to-r from-green-600 via-[#fff] to-[#fff] bg-clip-text">
-                    <p className='text-transparent font-semibold text-sm '>Filter By: ACTIVITY</p>
+                    <p className='text-transparent font-semibold text-sm '>Filter By: AVAILABILITY</p>
                 </div>
             </div>
 
@@ -116,7 +116,7 @@ const SIMPLE_CARDS = [
                   border-[#282828] border mx-0.5 h-[22px] gap-1.5 px-1.5 pr-2 text-xs
                  hover:text-brand"
                 >
-                    <TrendingUp className="text-green-600" />Highest
+                    <TrendingUp className="text-green-600" />In Stock
                 </button>
                 <button
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-lg
@@ -126,7 +126,7 @@ const SIMPLE_CARDS = [
                   border-[#282828] border mx-0.5 h-[22px] gap-1.5 px-1.5 pr-2 text-xs
                  hover:text-brand"
                 >
-                    <TrendingUp className="text-green-400" /> High
+                    <TrendingUp className="text-green-400" /> Limited
                 </button>
                 <button
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-lg
@@ -136,7 +136,7 @@ const SIMPLE_CARDS = [
                   border-[#282828] border mx-0.5 h-[22px] gap-1.5 px-1.5 pr-2 text-xs
                  hover:text-brand"
                 >
-                    <ChartNoAxesColumn className="text-yellow-600" /> Moderate
+                    <ChartNoAxesColumn className="text-yellow-600" /> Pre-order
                 </button>
                 <button
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-lg
@@ -146,7 +146,7 @@ const SIMPLE_CARDS = [
                   border-[#282828] border mx-0.5 h-[22px] gap-1.5 px-1.5 pr-2 text-xs
                  hover:text-brand"
                 >
-                    <TrendingDown className="text-green-600" /> Low
+                    <TrendingDown className="text-green-600" /> Out of Stock
                 </button>
             </div>
         </div>
