@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Taja - Chat. Shop. Sell.",
   description: "Shop & sell through WhatsApp conversations with Taja. No apps, no websites — just chat, browse products, and complete secure payments.",
   icons: {
-    icon: "/images/os-image.ico",
+    icon: "/images/os-image.png",
   },
 };
 

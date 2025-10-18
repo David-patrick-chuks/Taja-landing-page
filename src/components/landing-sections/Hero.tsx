@@ -42,7 +42,7 @@ const Hero = () => {
           }}
           className="w-full lg:text-2xl tracking-tight font-light sm:max-w-lg mx-auto lg:max-w-4xl lg:text-balance text-[#e1e1e1]"
         >
-          Shop & sell through WhatsApp conversations with taja. No apps, no websites — just chat, browse products, and complete secure payments.
+          Shop & sell through WhatsApp conversations with taja. No apps, no websites, just chat, browse products, and complete secure payments.
         </motion.p>
       </div>
       <motion.div

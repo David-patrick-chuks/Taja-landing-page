@@ -18,7 +18,7 @@ const CTA = () => {
           Shop & Sell Through WhatsApp Conversations
         </h2>
         <p className="text-lg lg:text-xl text-gray-300 text-center max-w-2xl mx-auto">
-          Start your free WhatsApp store on taja. No apps, no websites — just chat.
+          Start your free WhatsApp store on taja. No apps, no websites, just chat.
         </p>
       </div>
       <Link href="#features" className="cursor-pointer z-30">
