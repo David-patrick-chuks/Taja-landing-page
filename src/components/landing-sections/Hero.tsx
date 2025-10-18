@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Terminal } from "lucide-react";
+// import { Terminal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import PrimaryButtom from "../ui/custom-button";
@@ -67,7 +67,7 @@ const Hero = () => {
       >
         <Link href="#features" className="block">
           <PrimaryButtom>
-            <Terminal className="w-5 h-5" />
+            {/* <Terminal className="w-5 h-5" /> */}
             Start Free Today
           </PrimaryButtom>
         </Link>

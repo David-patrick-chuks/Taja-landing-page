@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { Terminal } from "lucide-react";
+// import { Terminal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -71,7 +71,7 @@ const Navbar = () => {
 
         <Link href="#features" className="cursor-pointer z-30">
           <PrimaryButtom>
-            <Terminal />
+            {/* <Terminal /> */}
             Get Started
           </PrimaryButtom>
         </Link>

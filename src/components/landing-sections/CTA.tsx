@@ -1,4 +1,4 @@
-import { Terminal } from "lucide-react";
+// import { Terminal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import PrimaryButtom from "../ui/custom-button";
@@ -23,7 +23,7 @@ const CTA = () => {
       </div>
       <Link href="#features" className="cursor-pointer z-30">
         <PrimaryButtom>
-          <Terminal />
+          {/* <Terminal /> */}
           Start Free Today
         </PrimaryButtom>
       </Link>
