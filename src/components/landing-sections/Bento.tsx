@@ -54,7 +54,7 @@ const Bento = () => {
                                 initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
                                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                                 transition={{ duration: 0.6, ease: 'easeOut', type: 'spring', delay: 0.35 }}
-                                className='tracking-tight text-sm lg:text-lg text-[#d1d1d1]'>Browse products, search, pay, and manage orders right in chat—handled by an intelligent WhatsApp assistant.</motion.p>
+                                className='tracking-tight text-sm lg:text-lg text-[#d1d1d1]'>Browse products, search, pay, and manage orders right in chat handled by an intelligent WhatsApp assistant.</motion.p>
                         </div>
                         <div className="h-full overflow-hidden w-full flex items-start lg:pt-10 lg:pb-4  relative z-10">
                             <AnimatedList className='w-full'>
@@ -122,7 +122,7 @@ const Bento = () => {
                                 initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
                                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                                 transition={{ duration: 0.6, ease: 'easeOut', type: 'spring', delay: 0.35 }}
-                                className='tracking-tight text-sm lg:text-lg text-[#d1d1d1]'>Upload images or videos—or just type—to find products instantly using AI.</motion.p>
+                                className='tracking-tight text-sm lg:text-lg text-[#d1d1d1]'>Upload images or videos or just type to find products instantly using AI.</motion.p>
                         </div>
                         <div className="h-full w-full flex items-center lg:pt-10 lg:pb-4  relative overflow-hidden z-20">
                             <CardStack />

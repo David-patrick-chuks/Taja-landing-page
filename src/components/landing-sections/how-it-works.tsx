@@ -24,7 +24,7 @@ const data = [
         id: 3,
         title: "3. Shop & Sell",
         content:
-            "Complete purchases through chat. Get digital receipts. Manage your store — all in WhatsApp.",
+            "Complete purchases through chat. Get digital receipts. Manage your store all in WhatsApp.",
         image: "/assets/shop.png",    
         icon: <Share2 className="w-6 h-6 text-primary" />,
     },

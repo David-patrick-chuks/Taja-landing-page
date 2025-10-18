@@ -437,14 +437,14 @@ const TestimonialsSection = () => {
       id: 1,
       username: "Sarah Chen",
       content:
-        "Taja Premium has revolutionized how our team handles sensitive documents. The bank-level security gives us peace of mind, and the real-time collaboration features make remote work seamless. The AI support bot is incredibly helpful - it's like having a security expert available 24/7. The non-custodial approach means we truly own our data, which is crucial for our legal practice.",
+        "Taja Premium has revolutionized our e-commerce business. Our sales have increased 300% since we started selling through WhatsApp. Customers love the convenience of shopping directly in their chat, and the AI bot handles most inquiries automatically. The secure payment system gives our customers confidence, and we've never had a payment issue. Highly recommend!",
       column: 1,
     },
     {
       id: 2,
       username: "Marcus Rodriguez",
       content:
-        "As a healthcare provider, data security is paramount. Taja's client-side encryption and audit logs help us maintain HIPAA compliance while providing our patients with secure document sharing. The emergency access feature is brilliant for continuity of care. Highly recommend for any healthcare organization.",
+        "As a small business owner, Taja has been a game-changer. No need for expensive websites or complex e-commerce platforms - our customers can browse and buy directly through WhatsApp. The AI product search helps customers find exactly what they're looking for, and the automated order tracking keeps everyone informed. Our customer satisfaction has never been higher.",
       column: 1,
     },
     {
@@ -453,35 +453,30 @@ const TestimonialsSection = () => {
       content: (
         <div className="space-y-3 text-pretty">
           <p>
-            Taja Premium has been a game-changer for our startup. Here&apos;s
-            why it stands out:
+            Taja Premium has transformed our retail business. Here&apos;s
+            why it's incredible:
           </p>
           <ul className="list-disc space-y-3 pl-6">
             <li>
-              True data ownership - no vendor lock-in, we control our files
-              completely
+              WhatsApp-first approach - customers already use it daily
             </li>
             <li>
-              The SDK integration was seamless - our developers had it working
-              in under an hour
+              AI product recommendations increased our average order value by 40%
             </li>
             <li>
-              Real-time notifications keep our team synchronized without
-              constant checking
+              Real-time inventory updates prevent overselling
             </li>
             <li>
-              The workspace permissions system is incredibly granular and secure
+              Secure payments with instant confirmations
             </li>
             <li>
-              Customer support via WhatsApp bot is surprisingly effective and
-              always available
+              Customer support automation saves us 10+ hours weekly
             </li>
             <li>
-              The pricing is fair for enterprise-grade security and features
+              Analytics help us understand customer behavior better
             </li>
             <li>
-              Perfect for our Web3 startup - aligns with our decentralized
-              values
+              No app downloads required - customers love the simplicity
             </li>
           </ul>
         </div>
@@ -492,14 +487,14 @@ const TestimonialsSection = () => {
       id: 4,
       username: "Dr. Emily Watson",
       content:
-        "The emergency access feature saved our research project when our lead researcher was unavailable. Taja's security features are exactly what we needed for our confidential medical research data. Excellent platform!",
+        "Our medical supply business has seen incredible growth with Taja. Healthcare providers can order supplies directly through WhatsApp, and the AI bot handles product questions and inventory checks instantly. The secure payment system meets our compliance requirements, and order tracking ensures timely deliveries. Game-changing platform!",
       column: 3,
     },
     {
       id: 5,
       username: "James Park",
       content:
-        "We migrated from Google Drive to Taja and couldn't be happier. The client-side encryption means our sensitive client documents are never exposed to third parties. The team collaboration features are intuitive, and the audit logs provide the compliance trail we need. The Web3 integration fits perfectly with our blockchain consulting business.",
+        "We switched from traditional e-commerce to Taja and our conversion rates doubled. Customers prefer shopping through WhatsApp conversations rather than navigating complex websites. The AI search by image feature is brilliant - customers just send a photo and find similar products instantly. The automated order management has streamlined our entire operation.",
       column: 3,
     },
   ];

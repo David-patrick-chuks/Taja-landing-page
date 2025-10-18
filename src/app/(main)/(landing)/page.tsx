@@ -8,6 +8,7 @@ import HowItWorks from '@/components/landing-sections/how-it-works'
 import Navbar from '@/components/landing-sections/navbar'
 import Testimonials from '@/components/landing-sections/testimonials'
 
+import { FaqSection } from '@/components/faq/FaqSection'
 
 const Landing = () => {
     return (
@@ -18,6 +19,7 @@ const Landing = () => {
                 <Bento />
                 {/* <Video /> */}
                 <HowItWorks />
+                <FaqSection />
                 <Brands />
                 <Testimonials />
             </div>

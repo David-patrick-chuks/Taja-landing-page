@@ -9,7 +9,7 @@ const Footer = () => {
     const emailBody = encodeURIComponent(
       "Heyyo,\n\nwanna chat about taja?"
     );
-    const mailtoLink = `mailto:hi@taja.com?subject=${emailSubject}&body=${emailBody}`;
+    const mailtoLink = `mailto:davidchuksdev@gmail.com?subject=${emailSubject}&body=${emailBody}`;
     window.open(mailtoLink, "_blank");
   };
 
@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <div>
               <h4 className="text-white text-4xl lg:text-5xl font-medium tracking-tight">
-                taja
+                Taja
               </h4>
               <p className="text-[#b1b1b1] text-base lg:text-lg tracking-tight mt-1">
                 The first AI-powered WhatsApp marketplace. Making commerce as simple as a chat.
@@ -109,7 +109,7 @@ const Footer = () => {
               </h3>
               <div className="flex flex-col gap-2">
                 <Link
-                  href="https://x.com/taja"
+                  href="https://x.com/david_chuks"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#b1b1b1] hover:text-white transition-colors text-xs flex items-center gap-1.5"
@@ -120,7 +120,7 @@ const Footer = () => {
                   Twitter
                 </Link>
                 <Link
-                  href="https://github.com/taja"
+                  href="https://github.com/david-patrick-chuks"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#b1b1b1] hover:text-white transition-colors text-xs flex items-center gap-1.5"
@@ -130,28 +130,7 @@ const Footer = () => {
                   </span>
                   GitHub
                 </Link>
-                <Link
-                  href="https://www.youtube.com/@taja"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#b1b1b1] hover:text-white transition-colors text-xs flex items-center gap-1.5"
-                >
-                  <span className="w-3.5">
-                    <Youtube />
-                  </span>
-                  YouTube
-                </Link>
-                <Link
-                  href="https://discord.gg/taja"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#b1b1b1] hover:text-white transition-colors text-xs flex items-center gap-1.5"
-                >
-                  <span className="w-3.5">
-                    <Discord />
-                  </span>
-                  Discord
-                </Link>
+              
                 <button
                   onClick={handleEmailClick}
                   className="text-[#b1b1b1] hover:text-white transition-colors text-xs flex items-center gap-1.5 text-left"
