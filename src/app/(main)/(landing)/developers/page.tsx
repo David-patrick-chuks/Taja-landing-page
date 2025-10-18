@@ -616,7 +616,7 @@ const Developers = () => {
                 </PrimaryButton>
               </Link>
               <Link
-                href="https://github.com/taja"
+                href="https://github.com/david-patrick-chuks"
                 target="_blank"
                 className="text-[#a472ea] hover:underline font-semibold flex items-center gap-2"
               >
