@@ -22,7 +22,7 @@ const Hero = () => {
           transition={{ duration: 1, ease: "easeOut", type: "spring" }}
           className="flex items-center justify-center gap-2 mb-4"
         >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-black/40 backdrop-blur-sm border border-[#252525]">
+            {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-black/40 backdrop-blur-sm border border-[#252525]">
             <span className="text-[#e1e1e1] text-sm font-medium">Backed by</span>
             <div className="flex items-center gap-1.5">
               <div className="w-5 h-5 bg-gradient-to-br from-[#FF6154] to-[#FF8C00] rounded flex items-center justify-center">
@@ -30,7 +30,7 @@ const Hero = () => {
               </div>
               <span className="text-white text-sm font-medium">___</span>
             </div>
-          </div>
+          </div> */}
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}

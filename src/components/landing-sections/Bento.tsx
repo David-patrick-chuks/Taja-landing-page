@@ -2,6 +2,7 @@
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { TajaAI, TajaCommerce, TajaPayment, TajaWhatsApp } from '../icons/icons'
 import { AnimatedList } from '../ui/animated-list'
 import CardStack from '../ui/card-stack'
 import Header from '../ui/header'
@@ -10,28 +11,28 @@ import OrbitComponent from '../ui/orbit'
 
 let notifications = [
     {
-        name: "Product Listed Successfully",
-        description: "Vintage Jacket • $45",
-        icon: <div className="text-2xl">🛍️</div>,
-        color: "#8B5CF6",
-    },
-    {
-        name: "New Order Received",
-        description: "Customer wants to buy",
-        icon: <div className="text-2xl">🛒</div>,
+        name: "Product Listed Successfully!",
+        description: "WhatsApp Commerce",
+        icon: <div className="p-1.5 h-full w-full flex items-center justify-center"> <TajaWhatsApp /></div>,
         color: "#101010",
     },
     {
+        name: "New Order Received",
+        description: "Commerce Platform",
+        icon: <div className="p-1.5 h-full w-full flex items-center justify-center"> <TajaCommerce /></div>,
+        color: "#fff",
+    },
+    {
         name: "Payment Confirmed",
-        description: "Order #1234 completed",
-        icon: <div className="text-2xl">✅</div>,
-        color: "#10B981",
+        description: "Secure Payments",
+        icon: <div className=" h-full flex items-center justify-center w-7"> <TajaPayment /></div>,
+        color: "#101010",
     },
     {
         name: "Product Found",
-        description: "AI matched your search",
-        icon: <div className="text-2xl">🔍</div>,
-        color: "#F59E0B",
+        description: "AI Search",
+        icon: <div className=" h-full flex items-center justify-center w-7"> <TajaAI /></div>,
+        color: "#fff",
     },
 ];
 
@@ -148,6 +149,8 @@ const Bento = () => {
 }
 
 export default Bento
+
+
 
 
 const Notification = ({ name, description, icon, color, time }: any) => {
